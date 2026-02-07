@@ -32,41 +32,20 @@ class BankAccount:
 
 def main():
     print("===== Welcome to Bank Application =====")
-    name = input("Enter account holder name: ")
-    acc_no = input("Enter account number: ")
 
-    account = BankAccount(name, acc_no)
+    # Predefined values for Jenkins (NO input)
+    name = "Thrisha"
+    acc_no = "ACC12345"
 
-    while True:
-        print("\n--- Menu ---")
-        print("1. Deposit")
-        print("2. Withdraw")
-        print("3. Check Balance")
-        print("4. Account Details")
-        print("5. Exit")
+    account = BankAccount(name, acc_no, 5000)
 
-        choice = input("Enter your choice: ")
+    # Automated operations
+    account.display_details()
+    account.deposit(2000)
+    account.withdraw(1500)
+    account.check_balance()
 
-        if choice == "1":
-            amount = float(input("Enter amount to deposit: "))
-            account.deposit(amount)
-
-        elif choice == "2":
-            amount = float(input("Enter amount to withdraw: "))
-            account.withdraw(amount)
-
-        elif choice == "3":
-            account.check_balance()
-
-        elif choice == "4":
-            account.display_details()
-
-        elif choice == "5":
-            print("Thank you for using Bank Application!")
-            break
-
-        else:
-            print("Invalid choice. Please try again.")
+    print("\nBank Application executed successfully!")
 
 
 if __name__ == "__main__":
