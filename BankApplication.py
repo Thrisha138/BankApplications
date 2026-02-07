@@ -7,7 +7,7 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            print(f"₹{amount} deposited successfully.")
+            print(f"Rs.{amount} deposited successfully.")
         else:
             print("Invalid deposit amount.")
 
@@ -18,16 +18,16 @@ class BankAccount:
             print("Insufficient balance.")
         else:
             self.balance -= amount
-            print(f"₹{amount} withdrawn successfully.")
+            print(f"Rs.{amount} withdrawn successfully.")
 
     def check_balance(self):
-        print(f"Current Balance: ₹{self.balance}")
+        print(f"Current Balance: Rs.{self.balance}")
 
     def display_details(self):
         print("\n--- Account Details ---")
         print("Name:", self.name)
         print("Account Number:", self.acc_no)
-        print("Balance: ₹", self.balance)
+        print("Balance: Rs.", self.balance)
 
 
 def main():
